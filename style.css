@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --primary: #007bb5;
+  --secondary: #716a69;
+  --mute: #ebebeb;
+  --info: #00a0dc;
+  --dark: #000000;
+  --light: #ffffff;
+  --html: #ff5733;
+  --css: #264de4;
+  --js: #f0db4f;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--mute);
+}
+
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Navbar*/
+nav {
+  width: 100vw;
+  background-color: var(--primary);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  height: 3.7em;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo-img {
+  height: 3em;
+}
+
+.nav__logo-text {
+  font-size: 2em;
+  display: none;
+}
+
+.nav__buttons {
+  display: flex;
+  justify-content: end;
+  align-items: baseline;
+  font-size: 1.3em;
+}
+
+.nav__links > a {
+  text-decoration: none;
+  color: var(--light);
+  margin: auto 0.5em;
+}
+
+.banner {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 8em;
+  margin-bottom: -12px;
+  background-image: url(./assets/banner.jpg);
+  background-size: cover;
+}
+
+/*Card*/
+.card {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.356);
+  background-color: var(--light);
+  margin-top: 0;
+}
+
+.card__circle-button {
+  top: -6em;
+  position: relative;
+}
+
+.card__profile {
+  width: 152px;
+  height: 152px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid var(--light);
+}
+.card__profile-img {
+  width: auto;
+  height: 100%;
+}
+
+.card__info {
+  position: relative;
+  margin-top: -85px;
+  padding-bottom: 2em;
+}
+
+.card__name {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.card__job {
+  font-size: 1.1em;
+  font-weight: 400;
+  margin-top: 0.6em;
+}
+
+.card__education,
+.card__location {
+  font-size: 1em;
+  font-weight: 400;
+  margin-top: 0.6em;
+  color: var(--secondary);
+}
+
+.card__info > p {
+  font-size: 1em;
+  font-weight: 400;
+  margin-top: 0.6em;
+}
+
+/*Experiencia*/
+
+.exp {
+  background-color: var(--light);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.exp__title {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.exp__item {
+  padding: 1em 0;
+  display: flex;
+}
+
+.exp__ico > img {
+  height: 4em;
+  width: auto;
+  max-width: 4em;
+}
+
+.exp__info {
+  padding-left: 0.8em;
+}
+
+.exp__job {
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 0.3em;
+}
+
+.exp__description {
+  font-size: 0.9em;
+  line-height: 1.7em;
+}
+
+.exp__period {
+  color: var(--secondary);
+  font-size: 0.9em;
+  line-height: 1.7em;
+}
+
+.exp__link {
+  display: block;
+  margin: 0.1em auto;
+  font-size: 1em;
+  line-height: 1.7em;
+  text-decoration: none;
+  color: var(--info);
+  font-weight: bold;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+/*Habilidades*/
+.skills__item {
+  padding: 1em 0;
+}
+
+.skills__container {
+  width: 100%;
+  background-color: var(--mute);
+}
+
+.skills__name {
+  text-align: right;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  color: white;
+}
+
+.html {
+  width: 90%;
+  background-color: var(--html);
+}
+.css {
+  width: 80%;
+  background-color: var(--css);
+}
+.js {
+  width: 85%;
+  background-color: var(--js);
+}
+
+/*Footer*/
+
+footer {
+  background-color: var(--primary);
+  height: 3.7em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100vw;
+}
+
+.scroll-back {
+  color: var(--light);
+  padding: 0.5em;
+  font-size: 1.3em;
+}
+
+/*Media queries*/
+@media only screen and (min-width: 480px) {
+  .container {
+    max-width: 95%;
+  }
+  .banner > img {
+    max-width: 95%;
+  }
+  .nav__logo-text {
+    display: block;
+    color: var(--light);
+    font-size: 1em;
+    font-weight: 500;
+    margin-left: .7em;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .exp {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+  .container {
+    max-width: 80%;
+  }
+}
